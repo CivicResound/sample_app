@@ -21,7 +21,9 @@ class User < ActiveRecord::Base
                                    dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower                                
   has_attached_file :resume
+  
   validates_attachment_content_type :resume, :content_type => 'application/pdf'
+  validates :resume_content_type, presence: true
 
   before_save { |user| user.email = user.email.downcase }
   before_save :create_remember_token
