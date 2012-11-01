@@ -57,15 +57,16 @@ class User < ActiveRecord::Base
 
   def feed
     # This is only a proto-feed
-    Micropost.where("user_id = ?", id)
+    Micropost.from_users_followed_by(self)
   end
 
-  def jobs
-    Micropost.all
-  end
+  # def feed
+  #   # This is only a proto-feed
+  #   Micropost.from_users_followed_by(self)
+  # end
 
   def greaterthans
-    self.where("id = ?", 50).paginate(page: params[:page])
+    self.where("admin = ?", true).paginate(page: params[:page])
   end
 
   private 

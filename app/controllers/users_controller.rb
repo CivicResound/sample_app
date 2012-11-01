@@ -29,6 +29,10 @@ class UsersController < ApplicationController
 	  	end
   end
 
+  def jobs
+    Micropost.all
+  end
+
   def edit
     
   end

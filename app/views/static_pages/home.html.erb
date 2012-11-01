@@ -7,6 +7,7 @@
 		<section>
 			<%= render 'shared/stats' %>
 		</section>
+		<% if current_user.admin? %>
 		<section>
 			<%= render 'shared/micropost_form' %>
 		</section>
@@ -15,11 +16,16 @@
 		<h3>Jobs Listing</h3>
 		<%= render 'shared/feed' %>
 	</div>
+	<% else %>
+	<div class="span8">
+		<%= render 'shared/micropost' %>
+	</div>
+	<% end %>
 </div>
 
 <% else %>
 	<div class="center hero-unit">
-		<h1>Welcome to the Sample App</h1>
+		<h1>Welcome to the Virtual Career Fair</h1>
 		<p>
 			This is the home page for the <a href="http://civicresound.com">CivicResound</a>
 		</p>

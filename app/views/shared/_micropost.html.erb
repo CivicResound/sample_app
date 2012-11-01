@@ -1,0 +1,7 @@
+<% if @feed_items.any? %>
+	<ol class="microposts">
+		<%= render partial: 'shared/micropost_item', collection: @micropost_items %>
+	</ol>
+	<% @micropost_items %> 
+
+<% end %> 

@@ -3,4 +3,6 @@
 </a>
 <h1><%= current_user.name %></h1>
 <span><%= link_to "view my profile", current_user %></span>
+<% if current_user.admin? %>
 <span><%= pluralize(current_user.microposts.count, "job posting") %></span>
+<% end %>
