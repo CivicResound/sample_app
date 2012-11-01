@@ -1,10 +1,28 @@
-<% provide(:title, 'All users') %>
-<h1>All users</h1>
+<% provide(:title, 'Student/Alumni Resumes') %>
+<% if current_user.admin? %>
+<h1>Student & Alumni Resumes</h1>
 
-<%= will_paginate %>
+<%= search_form_for @search do |f| %>
+<%= f.condition_fields do |c| %>
+  <div class= "fields">
+    <%= c.attribute_fields do |a| %>
+      <%= a.attribute_select %>
+    <% end %>
+    <%= c.predicate_select %>
+    <%= c.value_fields do |v| %>
+      <%= v.text_field :value %>
+    <% end %>
+    </div>
+  <% end %>
+
+<div class="actions"><%= f.submit "Search" %></div>
+
+<% end %>
 
 <ul class="users">
 	<%= render @users %>
 </ul>
+<% else %>
+	<li><%= link_to "Sign in", signin_path	%></li>
+<% end %>
 
-<%= will_paginate %>

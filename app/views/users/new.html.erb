@@ -4,7 +4,7 @@
 <div class="row">
 	<div class="span6 offset3">
 
-		<%= form_for(@user) do |f| %>
+		<%= form_for(@user, :html => { :multipart => true }) do |f| %>
 			<%= render 'shared/error_messages', object: @user %>
 			<%= f.label :name %>
 			<%= f.text_field :name %>
@@ -17,7 +17,169 @@
 
 			<%= f.label :password_confirmation, "Confirmation" %>
 			<%= f.password_field :password_confirmation %>
-
+			<br />
+			<h3>Big Ten School Association</h3>
+			<br />
+			<div class="radio">
+			<%= f.radio_button(:school_affliation, "Indiana University") %>
+			<%= f.label :school_affliation, "Indiana University" %>
+			<%= f.radio_button(:school_affliation, "Michigan State University") %>
+			<%= f.label :school_affliation, "Michigan State University" %>
+			<%= f.radio_button(:school_affliation, "Northwestern University") %>
+			<%= f.label :school_affliation, "Northwestern University" %>
+			<%= f.radio_button(:school_affliation, "Ohio State University") %>
+			<%= f.label :school_affliation, "Ohio State University" %>
+			<%= f.radio_button(:school_affliation, "Penn State University") %>
+			<%= f.label :school_affliation, "Penn State University" %>
+			<%= f.radio_button(:school_affliation, "Purdue University") %>
+			<%= f.label :school_affliation, "Purdue University" %>
+			<%= f.radio_button(:school_affliation, "University of Illinois") %>
+			<%= f.label :school_affliation, "University of Illinois" %>
+			<%= f.radio_button(:school_affliation, "University of Iowa") %>
+			<%= f.label :school_affliation, "University of Iowa" %>
+			<%= f.radio_button(:school_affliation, "University of Michigan") %>
+			<%= f.label :school_affliation, "University of Michigan" %>
+			<%= f.radio_button(:school_affliation, "University of Minnesota") %>
+			<%= f.label :school_affliation, "University of Minnesota" %>
+			<%= f.radio_button(:school_affliation, "University of Nebraska") %>
+			<%= f.label :school_affliation, "University of Nebraska" %>
+			<%= f.radio_button(:school_affliation, "University of Wisconsin") %>
+			<%= f.label :school_affliation, "University of Wisconsin" %>
+			</div>
+			<br />
+			<h3>Education Level</h3>
+			<br />
+			<div class= "radio">
+			<%= f.radio_button(:education_level, "Freshman") %>
+			<%= f.label(:education_level, "Freshman") %>
+			<%= f.radio_button(:education_level, "Sophomore") %>
+			<%= f.label(:education_level, "Sophomore") %>
+			<%= f.radio_button(:education_level, "Junior") %>
+			<%= f.label(:education_level, "Junior") %>
+			<%= f.radio_button(:education_level, "Senior") %>
+			<%= f.label(:education_level, "Senior") %>
+			<%= f.radio_button(:education_level, "Associates") %>
+			<%= f.label(:education_level, "Associates") %>
+			<%= f.radio_button(:education_level, "Bachelors Degree") %>
+			<%= f.label(:education_level, "Bachelors Degree") %>
+			<%= f.radio_button(:education_level, "Masters Program") %>
+			<%= f.label(:education_level, "Masters Program") %>
+			<%= f.radio_button(:education_level, "Masters Degree") %>
+			<%= f.label(:education_level, "Masters Degree") %>
+			<%= f.radio_button(:education_level, "Doctorate Program") %>
+			<%= f.label(:education_level, "Doctorate Program") %>
+			<%= f.radio_button(:education_level, "Doctorate Degree") %>
+			<%= f.label(:education_level, "Doctorate Degree") %>
+			</div>
+			<br />
+			<h3>Job Type Of Interest</h3>
+			<br />
+			<div class="checkbox inline">
+			<%= f.check_box :accounting, class: "checkbox inline" %>
+			<%= label_tag :accounting, "Accounting" %>
+			<%= f.check_box :admin_support, class: "checkbox inline" %>
+			<%= label_tag :admin_support, "Admin Support" %>
+			<%= f.check_box :advertising %>
+			<%= label_tag(:advertising, "Advertising") %>
+			<%= f.check_box :agriculture %>
+			<%= label_tag(:agriculture, "Agriculture") %>
+			<%= f.check_box :architecture %>
+			<%= label_tag(:architecture, "Architecture") %>
+			<%= f.check_box :banking %>
+			<%= label_tag(:banking, "Banking") %>
+			<%= f.check_box :chemistry %>
+			<%= label_tag(:chemistry, "Chemistry") %>
+			<%= f.check_box :communications %>
+			<%= label_tag(:communications, "Communications") %>
+			<%= f.check_box :construction %>
+			<%= label_tag(:construction, "Construction") %>
+			<%= f.check_box :consulting %>
+			<%= label_tag(:consulting, "Consulting") %>
+			<%= f.check_box :customer_service %>
+			<%= label_tag(:customer_service, "Customer Service") %>
+			<%= f.check_box :education %>
+			<%= label_tag(:education, "Education") %>
+			<%= f.check_box :engineering %>
+			<%= label_tag(:engineering, "Engineering") %>
+			<%= f.check_box :environmental %>
+			<%= label_tag(:environmental, "Environmental") %>
+			<%= f.check_box :finance %>
+			<%= label_tag(:finance, "Finance") %>
+			<%= f.check_box :food_beverage %>
+			<%= label_tag(:food_beverage, "Food Beverage") %>
+			<%= f.check_box :foreign_language %>
+			<%= label_tag(:foreign_language, "Foreign Language") %>
+			<%= f.check_box :fundraising %>
+			<%= label_tag(:fundraising, "Fundraising") %>
+			<%= f.check_box :government %>
+			<%= label_tag(:government, "Government") %>
+			<%= f.check_box :graphic_design %>
+			<%= label_tag(:graphic_design, "Graphic Design") %>
+			<%= f.check_box :healthcare %>
+			<%= label_tag(:healthcare, "Healthcare") %>
+			<%= f.check_box :hospitality %>
+			<%= label_tag(:hospitality, "Hospitality") %>
+			<%= f.check_box :human_resources %>
+			<%= label_tag(:human_resources, "Human Resources") %>
+			<%= f.check_box :information_tech %>
+			<%= label_tag(:information_tech, "Information Technology") %>
+			<%= f.check_box :international_relations %>
+			<%= label_tag(:international_relations, "International Relations") %>
+			<%= f.check_box :investment_banking %>
+			<%= label_tag(:investment_banking, "Investment Banking") %>
+			<%= f.check_box :journalism %>
+			<%= label_tag(:journalism, "Journalism") %>
+			<%= f.check_box :legal %>
+			<%= label_tag(:legal, "Legal") %>
+			<%= f.check_box :logistics %>
+			<%= label_tag(:logistics, "Logistics") %>
+			<%= f.check_box :management %>
+			<%= label_tag(:management, "Management") %>
+			<%= f.check_box :marketing %>
+			<%= label_tag(:marketing, "Marketing") %>
+			<%= f.check_box :manufacturing %>
+			<%= label_tag(:manufacturing, "Manufacturing") %>
+			<%= f.check_box :merchandising %>
+			<%= label_tag(:merchandising, "Merchandising") %>
+			<%= f.check_box :non_profit %>
+			<%= label_tag(:non_profit, "Non-Profit") %>
+			<%= f.check_box :nutrition %>
+			<%= label_tag(:nutrition, "Nutrition") %>
+			<%= f.check_box :operations %>
+			<%= label_tag(:operations, "Operations") %>
+			<%= f.check_box :performing_arts %>
+			<%= label_tag(:performing_arts, "Performing Arts") %>
+			<%= f.check_box :pharmaceuticals %>
+			<%= label_tag(:pharmaceuticals, "Pharmaceuticals") %>
+			<%= f.check_box :physics %>
+			<%= label_tag(:physics, "Physics") %>
+			<%= f.check_box :public_relations %>
+			<%= label_tag(:public_relations, "Public Relations") %>
+			<%= f.check_box :real_estate %>
+			<%= label_tag(:real_estate, "Real Estate") %>
+			<%= f.check_box :sales %>
+			<%= label_tag(:sales, "Sales") %>
+			<%= f.check_box :social_services %>
+			<%= label_tag(:social_services, "Social Services") %>
+			<%= f.check_box :transportation %>
+			<%= label_tag(:transportation, "Transportation") %>
+			</div>
+			<br />
+			<h3>Job Level Of Interest</h3>
+			<br />
+			<div class="radio">
+			<%= f.radio_button(:job_level, "Internship") %>
+			<%= f.label(:job_level, "Internship") %>
+			<%= f.radio_button(:job_level, "Entry Level") %>
+			<%= f.label(:job_level, "Entry Level") %>
+			<%= f.radio_button(:job_level, "Experienced") %>
+			<%= f.label(:job_level, "Experienced") %>
+			</div>
+			<br />
+			<h3>Add Resume</h3>
+			<br />
+			<%= f.file_field :resume %>
+			<br />
 			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
 
 		<% end %>
