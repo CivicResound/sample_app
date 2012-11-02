@@ -30,6 +30,15 @@ SampleApp::Application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
 
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['fearisthemindkiller'],
+    :access_key_id => ENV['AKIAIKT354HYWBN7OL5Q'],
+    :secret_access_key => ENV['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']
+    }
+  }
+
   # See everything in the log (default is :info)
   # config.log_level = :debug
 
