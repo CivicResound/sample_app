@@ -13,15 +13,6 @@ SampleApp::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
-  config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['gmork-1019'],
-    :access_key_id => ENV['AKIAIKT354HYWBN7OL5Q'],
-    :secret_access_key => ENV['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']
-    }
-  }
-
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 

@@ -23,9 +23,9 @@
 		<% end %>
 	</div>
 	<div>
-		<% if @user.document.exists? then %>
-			<%= image_tag @user.document.url %>
-		<% end %>
+		<%# if @user.document.exists? then %>
+			<%= image_tag @user.document_url.to_s %>
+		<%# end %>
 	</div>
 </div>
 
