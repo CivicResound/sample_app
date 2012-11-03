@@ -33,7 +33,7 @@ SampleApp::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['fearisthemindkiller'],
+    :bucket => ENV['gmork-1019'],
     :access_key_id => ENV['AKIAIKT354HYWBN7OL5Q'],
     :secret_access_key => ENV['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']
     }

@@ -20,7 +20,12 @@ class User < ActiveRecord::Base
                                    class_name: "Relationship",
                                    dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower                                
-  has_attached_file :document
+  has_attached_file :document, :storage => :s3,
+    :s3_credentials => {
+    :access_key_id => ENV['AKIAIKT354HYWBN7OL5Q'],
+    :bucket => ENV['gmork-1019'],
+    :secret_access_key => ENV['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']
+  }
   
   validates_attachment_content_type :document, :content_type => 'application/pdf'
   validates :document_content_type, presence: true
