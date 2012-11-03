@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031014459) do
+ActiveRecord::Schema.define(:version => 20121103005331) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -41,11 +41,6 @@ ActiveRecord::Schema.define(:version => 20121031014459) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",                   :default => false
-    t.string   "job_interest_type"
-    t.string   "resume_file_name"
-    t.string   "resume_content_type"
-    t.integer  "resume_file_size"
-    t.datetime "attachment_updated_at"
     t.string   "school_affliation"
     t.string   "education_level"
     t.boolean  "accounting"
@@ -93,6 +88,10 @@ ActiveRecord::Schema.define(:version => 20121031014459) do
     t.boolean  "social_services"
     t.boolean  "transportation"
     t.string   "job_level"
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

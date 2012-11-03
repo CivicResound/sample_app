@@ -23,8 +23,8 @@
 		<% end %>
 	</div>
 	<div>
-		<% if @user.resume.exists? then %>
-			<%= image_tag @user.resume %>
+		<% if @user.document.exists? then %>
+			<%= image_tag @user.document.url %>
 		<% end %>
 	</div>
 </div>

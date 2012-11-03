@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :admin, :email, :name, :password, :password_confirmation, :resume,
+  attr_accessible :admin, :email, :name, :password, :password_confirmation, :document,
                   :school_affliation, :education_level, :job_interest_type, 
                   :job_level, :accounting, :admin_support, :advertising, :agriculture,
                   :architecture, :banking, :chemistry, :communications, :construction,
@@ -20,10 +20,10 @@ class User < ActiveRecord::Base
                                    class_name: "Relationship",
                                    dependent: :destroy
   has_many :followers, through: :reverse_relationships, source: :follower                                
-  has_attached_file :resume
+  has_attached_file :document
   
-  validates_attachment_content_type :resume, :content_type => 'application/pdf'
-  validates :resume_content_type, presence: true
+  validates_attachment_content_type :document, :content_type => 'application/pdf'
+  validates :document_content_type, presence: true
 
   before_save { |user| user.email = user.email.downcase }
   before_save :create_remember_token
@@ -37,8 +37,8 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
 
   UNRANSACKABLE_ATTRIBUTES = ["email", "password", "password_confirmation", "resume",
-                              "job_interest_type", "id", "resume_file_size", "resume_content_type",
-                              "remember_token", "admin", "resume_file_name", "created_at", "updated_at",
+                              "job_interest_type", "id", "document_file_size", "document_content_type",
+                              "remember_token", "admin", "document_file_name", "created_at", "updated_at",
                               "attachment_updated_at"]
 
   def self.ransackable_attributes auth_object = nil
