@@ -5,7 +5,4 @@ CarrierWave.configure do |config|
 		aws_secret_access_key: ENV["sW3Pvaje6F18zymx9NvETZZeK/9M2F3Xqi3di8Im"]
 	}
 	config.fog_directory = ENV["fearisthemindkiller"]
-	config.fog_public = true
-
-	config.cache_dir = "#{Rails.root}/tmp/uploads" 
 end
