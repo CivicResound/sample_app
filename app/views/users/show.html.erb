@@ -22,10 +22,14 @@
 			<%= will_paginate @microposts %>
 		<% end %>
 	</div>
-	<div>
-		<%# if @user.document.exists? then %>
-			<%= image_tag @user.document_url.to_s %>
-		<%# end %>
-	</div>
+	<div class="span16  alert alert-success block-message"><p><%= @user.degree_progress %></p></div>
+	<div class="span16  alert alert-success block-message "><p><%= @user.skills %></div>
+		<div class="span16  alert alert-success block-message "><p><%= @user.school_affliation %></p></div>	
+		<div class="span16"><h1>Employment/Internships</h1></div>
+	<div class="span16  alert alert-info block-message "><p><%= @user.employment_history %></p></div>	
+	<div class="span3  alert alert-warning block-message "><p><%= @user.activities %></p></div>
+		
+	<div class="span3  alert alert-warning block-message "><p><%= @user.address %></p></div>		
+	<div class="span3  alert alert-warning block-message "><p><%= @user.phone_number %> • <%= @user.email %></p></div>		
 </div>
 

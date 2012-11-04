@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
                   :marketing, :manufacturing, :merchandising, :non_profit, :nutrition,
                   :operations, :performing_arts, :pharmaceuticals, :physics, 
                   :public_relations, :real_estate, :sales, :social_services,
-                  :transportation
+                  :transportation, :degree_progress, :activities, :skills, 
+                  :employment_history, :address, :phone_number
 
   has_secure_password
   has_many :microposts, dependent: :destroy

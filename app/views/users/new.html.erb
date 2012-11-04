@@ -176,9 +176,25 @@
 			<%= f.label(:job_level, "Experienced") %>
 			</div>
 			<br />
-			<h3>Add Resume</h3>
+			<h3>Add Resume Info</h3>
 			<br />
-			<%= f.file_field :document %>
+			<%= label_tag(:degree_progress, "Degree Progress") %>
+			<%= f.text_field :degree_progress %>
+			<br />
+			<%= label_tag(:activities, "Activities") %>
+			<%= f.text_field :activities %>
+			<br />
+			<%= label_tag(:skills, "Skills") %>
+			<%= f.text_field :skills %>
+			<br />
+			<%= label_tag(:employment_history, "Employment History") %>
+			<%= f.text_area :employment_history %>
+			<br />
+			<%= label_tag(:address, "Address") %>
+			<%= f.text_field :address %>
+			<br />
+			<%= label_tag(:phone_number, "Phone Number") %>
+			<%= f.text_area :phone_number %>
 			<br />
 			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
 
