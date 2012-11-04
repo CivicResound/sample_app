@@ -178,23 +178,23 @@
 			<br />
 			<h3>Add Resume Info</h3>
 			<br />
-			<%= label_tag(:degree_progress, "Degree Progress") %>
-			<%= f.text_field :degree_progress %>
+			<%= label_tag(:degree_progress, "Degree Progress (Maximum 70 Characters)") %>
+			<%= f.text_field :degree_progress %> 
 			<br />
-			<%= label_tag(:activities, "Activities") %>
-			<%= f.text_field :activities %>
+			<%= label_tag(:activities, "Activities (Maximum 250 Characters) ") %>
+			<%= f.text_field :activities %> 
 			<br />
-			<%= label_tag(:skills, "Skills") %>
-			<%= f.text_field :skills %>
+			<%= label_tag(:skills, "Skills (Maximum 60 Characters)") %>
+			<%= f.text_field :skills %> 
 			<br />
-			<%= label_tag(:employment_history, "Employment History") %>
-			<%= f.text_area :employment_history %>
+			<%= label_tag(:employment_history, "Employment History (Maximum 250 Characters)") %>
+			<%= f.text_area :employment_history %> 
 			<br />
 			<%= label_tag(:address, "Address") %>
-			<%= f.text_field :address %>
+			<%= f.text_field :address %> 
 			<br />
 			<%= label_tag(:phone_number, "Phone Number") %>
-			<%= f.text_area :phone_number %>
+			<%= f.text_area :phone_number %> 
 			<br />
 			<%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
 
