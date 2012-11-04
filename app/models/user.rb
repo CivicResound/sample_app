@@ -41,6 +41,7 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
   validates :address, length: { maximum: 250 }
   validates :phone_number, length: { maximum: 20 }
+  validates :employment_history, length: { maximum: 250 }
 
   mount_uploader :document, DocumentUploader
 
