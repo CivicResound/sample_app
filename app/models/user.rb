@@ -34,9 +34,13 @@ class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
    					uniqueness: { case_sensitive: false }
-
+  validates :degree_progress, length: { maximum: 70 }
+  validates :skills, length: { maximum: 60 }
+  validates :activities, length: { maximum: 250 }
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+  validates :address, length: { maximum: 250 }
+  validates :phone_number, length: { maximum: 20 }
 
   mount_uploader :document, DocumentUploader
 
