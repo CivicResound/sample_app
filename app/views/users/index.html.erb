@@ -1,6 +1,8 @@
 <% provide(:title, 'Student/Alumni Resumes') %>
 <% if current_user.admin? %>
-<h1>Student & Alumni Resumes</h1>
+<h1 class="pull-right">Student & Alumni Profiles</h1>
+
+<p class="pull-right span8">To use the search functionality, you can just select the industry you are looking to hire in and type in "true" to find the students or alumni that are interested in those types of jobs. This is the technique that you will likely use the most. Once you find some students that meet your selected criteria, feel free to click on the students name to look at their profile. You can even "follow" them to have a list of strong candidates before the big event!</p>
 
 <%= search_form_for @search do |f| %>
 <%= f.condition_fields do |c| %>
