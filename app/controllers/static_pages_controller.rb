@@ -15,4 +15,10 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def lilly
+  end
+
+  def careerfair
+  end
 end
