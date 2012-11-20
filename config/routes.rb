@@ -19,6 +19,17 @@ SampleApp::Application.routes.draw do
   match '/contact',    to: 'static_pages#contact'
   match '/lilly',      to: 'static_pages#lilly'
   match '/careerfair', to: 'static_pages#careerfair'
+  match '/ncaa',       to: 'static_pages#ncaa'
+  match '/simon',      to: 'static_pages#simon'
+  match '/oneamerica', to: 'static_pages#oneamerica'
+  match '/quicken',    to: 'static_pages#quicken'
+  match '/blackbaud',  to: 'static_pages#blackbaud'
+  match '/docz',       to: 'static_pages#docz'
+  match '/wellpoint',  to: 'static_pages#wellpoint'
+  match '/pacers',     to: 'static_pages#pacers'
+  match '/cavaliers',  to: 'static_pages#cavaliers'
+  match '/rci',        to: 'static_pages#rci'
+  match '/minnesota',  to: 'static_pages#minnesota'
 
 
 

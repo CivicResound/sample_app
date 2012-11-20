@@ -21,4 +21,34 @@ class StaticPagesController < ApplicationController
 
   def careerfair
   end
+
+  def cavaliers
+  end
+
+  def pacers
+  end
+
+  def wellpoint
+  end
+
+  def docz
+  end
+
+  def blackbaud
+  end
+
+  def quicken
+  end
+
+  def oneamerica
+  end
+
+  def simon
+  end
+
+  def ncaa
+  end
+
+  def minnesota
+  end
 end
