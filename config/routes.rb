@@ -30,6 +30,7 @@ SampleApp::Application.routes.draw do
   match '/cavaliers',  to: 'static_pages#cavaliers'
   match '/rci',        to: 'static_pages#rci'
   match '/minnesota',  to: 'static_pages#minnesota'
+  match '/bigten',     to: 'static_pages#bigten'
 
 
 

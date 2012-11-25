@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		  <title><%= full_title(yield(:title)) %></title>
+		  <%= stylesheet_link_tag    "application", media: "all" %>
+		  <%= javascript_include_tag "application" %>
+		  <%= csrf_meta_tags %>
+		  <%= render 'layouts/shim' %>
+	</head>
+	<body>
+		<%= render 'layouts/header' %>
+		<div class="container">
+			<% flash.each do |key, value| %>
+				<%= content_tag(:div, value, class: "alert alert-#{key}") %>
+			<% end %>
 <div class="pull-left"><%= image_tag("big_lilly_logo.png") %></div>
 <div class="pull-right span6 alert alert-info block-message"><h4>Hours Available: Nov.29, 11:00am-2:00pm. Nov.30, 11:00am-2:00pm.</h4></div>
 <div class="pull-right span6 alert alert-info block-message"><h4>Positions and internships available for accounting, agriculture, chemistry, communications, engineering, human resources, information technology, marketing, pharmaceuticals, and sales disciplines.</h4></div>
@@ -50,6 +65,10 @@ Proven ability to adapt and learn quickly<br /><br />
 Demonstrated ability to work productively in both an interdisciplinary team environment and work  independently from the bench (design experiments, generate data and interpret results)<br /><br />
 Effective oral and written communication skills<br /><br />
 Demonstrated self-management, task planning and organizing skills; as well as problem solving and decision making skills</p></div>
+<%= render 'layouts/footer' %>
+		</div>
+	</body>
+</html>
 
 
 
