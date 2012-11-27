@@ -66,4 +66,16 @@ class StaticPagesController < ApplicationController
   def bigten
     render :layout => false
   end
+
+  def bkd
+    render :layout => false
+  end
+
+  def exacttarget
+    render :layout => false
+  end
+
+  def isc
+    render :layout => false
+  end
 end

@@ -27,10 +27,13 @@ SampleApp::Application.routes.draw do
   match '/docz',       to: 'static_pages#docz'
   match '/wellpoint',  to: 'static_pages#wellpoint'
   match '/pacers',     to: 'static_pages#pacers'
-  match '/cavaliers',  to: 'static_pages#cavaliers'
-  match '/rci',        to: 'static_pages#rci'
-  match '/minnesota',  to: 'static_pages#minnesota'
-  match '/bigten',     to: 'static_pages#bigten'
+  match '/cavaliers',   to: 'static_pages#cavaliers'
+  match '/rci',         to: 'static_pages#rci'
+  match '/minnesota',   to: 'static_pages#minnesota'
+  match '/bigten',      to: 'static_pages#bigten'
+  match '/exacttarget', to: 'static_pages#exacttarget'
+  match '/bkd',         to: 'static_pages#bkd'
+  match '/isc',         to: 'static_pages#isc'       
 
 
 
