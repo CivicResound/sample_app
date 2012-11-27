@@ -78,4 +78,8 @@ class StaticPagesController < ApplicationController
   def isc
     render :layout => false
   end
+
+  def herffjones
+    render :layout => false
+  end
 end

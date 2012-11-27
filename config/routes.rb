@@ -33,7 +33,8 @@ SampleApp::Application.routes.draw do
   match '/bigten',      to: 'static_pages#bigten'
   match '/exacttarget', to: 'static_pages#exacttarget'
   match '/bkd',         to: 'static_pages#bkd'
-  match '/isc',         to: 'static_pages#isc'       
+  match '/isc',         to: 'static_pages#isc' 
+  match '/herffjones',  to: 'static_pages#herffjones'      
 
 
 
