@@ -1,4 +1,6 @@
 class StaticPagesController < ApplicationController
+before_filter :signed_in_user
+
   def home
   	if signed_in?
   	@micropost = current_user.microposts.build
@@ -81,5 +83,12 @@ class StaticPagesController < ApplicationController
 
   def herffjones
     render :layout => false
+  end
+
+  private
+
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to root_path unless current_user?(@user)
   end
 end
